@@ -10,7 +10,7 @@ const MoviesPage = () => {
   const [error, setError] = useState(null);
   const [activeGenre, setActiveGenre] = useState('all');
   const [activeLanguage, setActiveLanguage] = useState('all');
-  
+  const api = 'https://flickfusion-backend-zn4d.onrender.com/api';
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get('search');
