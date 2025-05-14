@@ -1,0 +1,25 @@
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .seat {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    transition: 0.2s;
+  }
+  .seat:hover {
+    background: #bbb;
+  }
+  .seat.selected {
+    background: green;
+    color: white;
+  }
+  

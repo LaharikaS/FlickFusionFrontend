@@ -1,0 +1,91 @@
+.movies-page {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+}
+
+.movies-header {
+ margin-bottom: 30px;
+}
+
+.movies-header h1 {
+ font-size: 28px;
+ margin-bottom: 20px;
+ color: #333;
+}
+
+.filters-section {
+ background-color: white;
+ border-radius: 8px;
+ padding: 20px;
+ margin-bottom: 20px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+ margin-bottom: 15px;
+}
+
+.filter-group h3 {
+ font-size: 16px;
+ margin-bottom: 10px;
+ color: #333;
+}
+
+.filter-options {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+
+.filter-button {
+ padding: 8px 16px;
+ border-radius: 20px;
+ background-color: #f0f0f0;
+ color: #333;
+ font-size: 14px;
+ transition: all 0.3s;
+}
+
+.filter-button.active {
+ background-color: #f84464;
+ color: white;
+}
+
+.movies-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+ gap: 20px;
+}
+
+.loading, .no-results {
+ text-align: center;
+ padding: 40px 0;
+ color: #666;
+}
+
+.no-results h2 {
+ font-size: 20px;
+ margin-bottom: 10px;
+}
+
+.no-results p {
+ font-size: 16px;
+ color: #888;
+}
+
+@media (max-width: 768px) {
+ .movies-header h1 {
+   font-size: 24px;
+ }
+ 
+ .movies-grid {
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   gap: 15px;
+ }
+ 
+ .filter-button {
+   font-size: 12px;
+   padding: 6px 12px;
+ }
+}

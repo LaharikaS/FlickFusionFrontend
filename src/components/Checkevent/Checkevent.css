@@ -1,0 +1,539 @@
+.checkout-page {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 2rem 1rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.checkout-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 2rem;
+ padding-bottom: 1rem;
+ border-bottom: 1px solid #e5e5e5;
+}
+
+.checkout-header h1 {
+ font-size: 2rem;
+ margin: 0;
+ color: #333;
+}
+
+.back-link {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ color: #555;
+ text-decoration: none;
+ transition: color 0.2s;
+}
+
+.back-link:hover {
+ color: #0056b3;
+}
+
+.checkout-content {
+ display: flex;
+ gap: 2rem;
+ flex-wrap: wrap;
+}
+
+.checkout-main {
+ flex: 3;
+ min-width: 300px;
+}
+
+.checkout-sidebar {
+ flex: 1;
+ min-width: 250px;
+}
+
+.form-section {
+ margin-bottom: 2rem;
+ background-color: #fff;
+ border-radius: 8px;
+ padding: 1.5rem;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+ font-size: 1.25rem;
+ margin-top: 0;
+ margin-bottom: 1.5rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 1px solid #f0f0f0;
+ color: #333;
+}
+
+/* Event Summary */
+.event-summary {
+ display: flex;
+ gap: 1rem;
+ align-items: center;
+}
+
+.event-image {
+ width: 120px;
+ height: 80px;
+ overflow: hidden;
+ border-radius: 6px;
+ flex-shrink: 0;
+}
+
+.event-image img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.event-info {
+ flex-grow: 1;
+}
+
+.event-info h3 {
+ margin-top: 0;
+ margin-bottom: 0.5rem;
+ font-size: 1.1rem;
+}
+
+.event-info p {
+ margin: 0.3rem 0;
+ font-size: 0.9rem;
+ color: #555;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+/* Ticket Selector */
+.ticket-selector {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem 0;
+ border-bottom: 1px solid #f0f0f0;
+}
+
+.ticket-type {
+ display: flex;
+ flex-direction: column;
+}
+
+.ticket-price {
+ font-weight: bold;
+ margin-top: 0.25rem;
+ color: #333;
+}
+
+.ticket-quantity {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+
+.quantity-btn {
+ width: 2rem;
+ height: 2rem;
+ border-radius: 50%;
+ border: 1px solid #ccc;
+ background-color: #fff;
+ font-size: 1.2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ transition: all 0.2s;
+}
+
+.quantity-btn:hover:not(:disabled) {
+ background-color: #f5f5f5;
+}
+
+.quantity-btn:disabled {
+ opacity: 0.5;
+ cursor: not-allowed;
+}
+
+.quantity-display {
+ font-size: 1.2rem;
+ min-width: 1.5rem;
+ text-align: center;
+}
+
+.ticket-limit-note {
+ font-size: 0.8rem;
+ color: #888;
+ margin-top: 0.5rem;
+}
+
+/* Form Elements */
+.form-group {
+ margin-bottom: 1.25rem;
+}
+
+.form-row {
+ display: flex;
+ gap: 1rem;
+ margin-bottom: 1.25rem;
+}
+
+.form-group.half {
+ flex: 1;
+}
+
+label {
+ display: block;
+ margin-bottom: 0.5rem;
+ font-size: 0.9rem;
+ color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+ width: 100%;
+ padding: 0.75rem;
+ border-radius: 4px;
+ border: 1px solid #ddd;
+ font-family: inherit;
+ font-size: 1rem;
+ transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+ outline: none;
+ border-color: #0071e3;
+ box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.2);
+}
+
+input.error {
+ border-color: #e74c3c;
+}
+
+.error-message {
+ display: block;
+ color: #e74c3c;
+ font-size: 0.8rem;
+ margin-top: 0.25rem;
+}
+
+/* Payment Options */
+.payment-options {
+ display: flex;
+ gap: 1rem;
+ margin-bottom: 1.5rem;
+}
+
+.payment-option {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0.75rem 1.25rem;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ cursor: pointer;
+ flex: 1;
+ transition: all 0.2s;
+}
+
+.payment-option:has(input:checked) {
+ border-color: #0071e3;
+ background-color: rgba(0, 113, 227, 0.05);
+}
+
+.payment-option label {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ margin: 0;
+ cursor: pointer;
+ width: 100%;
+}
+
+.payment-option input[type="radio"] {
+ accent-color: #0071e3;
+}
+
+/* Credit Card Form */
+.credit-card-form {
+ padding-top: 1rem;
+ border-top: 1px solid #f0f0f0;
+}
+
+/* Order Summary */
+.order-summary {
+ background-color: #fff;
+ border-radius: 8px;
+ padding: 1.5rem;
+ margin-bottom: 1.5rem;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary h2 {
+ font-size: 1.25rem;
+ margin-top: 0;
+ margin-bottom: 1.5rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 1px solid #f0f0f0;
+ color: #333;
+}
+
+.summary-line {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 1rem;
+ font-size: 0.95rem;
+}
+
+.summary-line.service-fee {
+ padding-bottom: 1rem;
+ border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-line.total {
+ font-weight: bold;
+ font-size: 1.1rem;
+ margin-top: 1rem;
+}
+
+/* Event Policies */
+.event-policies {
+ background-color: #fff;
+ border-radius: 8px;
+ padding: 1.5rem;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.event-policies h3 {
+ font-size: 1.1rem;
+ margin-top: 0;
+ margin-bottom: 1rem;
+ color: #333;
+}
+
+.event-policies ul {
+ padding-left: 1.25rem;
+ margin: 0;
+}
+
+.event-policies li {
+ margin-bottom: 0.5rem;
+ font-size: 0.9rem;
+ color: #555;
+}
+
+/* Form Actions */
+.form-actions {
+ margin-top: 2rem;
+ display: flex;
+ justify-content: flex-end;
+}
+
+.complete-booking-button {
+ background-color: #0071e3;
+ color: white;
+ border: none;
+ border-radius: 6px;
+ padding: 1rem 2rem;
+ font-size: 1rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+
+.complete-booking-button:hover:not(:disabled) {
+ background-color: #005bbf;
+}
+
+.complete-booking-button:disabled {
+ background-color: #ccc;
+ cursor: not-allowed;
+}
+
+/* Loading state */
+.loading-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 50vh;
+}
+
+.loading-spinner {
+ border: 4px solid rgba(0, 0, 0, 0.1);
+ border-radius: 50%;
+ border-top: 4px solid #0071e3;
+ width: 40px;
+ height: 40px;
+ animation: spin 1s linear infinite;
+ margin-bottom: 1rem;
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.error-container {
+ text-align: center;
+ padding: 3rem 1rem;
+}
+
+.error-container h2 {
+ margin-bottom: 1rem;
+ color: #e74c3c;
+}
+
+/* Booking Confirmation */
+.booking-confirmation {
+ background-color: #fff;
+ border-radius: 8px;
+ padding: 2rem;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.confirmation-header {
+ text-align: center;
+ margin-bottom: 2rem;
+}
+
+.confirmation-icon {
+ display: block;
+ width: 80px;
+ height: 80px;
+ margin: 0 auto 1rem;
+ background-color: #4caf50;
+ color: white;
+ border-radius: 50%;
+ font-size: 3rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.confirmation-header h1 {
+ color: #4caf50;
+ margin: 0;
+}
+
+.confirmation-details {
+ margin-bottom: 2rem;
+}
+
+.confirmation-details h2 {
+ font-size: 1.5rem;
+ margin-top: 0;
+ margin-bottom: 1rem;
+}
+
+.booking-summary {
+ background-color: #f9f9f9;
+ border-radius: 6px;
+ padding: 1.5rem;
+ margin: 1.5rem 0;
+}
+
+.summary-item {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 0.75rem;
+ font-size: 0.95rem;
+}
+
+.summary-item.total {
+ padding-top: 0.75rem;
+ border-top: 1px solid #ddd;
+ font-weight: bold;
+ font-size: 1.1rem;
+}
+
+.summary-label {
+ color: #555;
+}
+
+.summary-value {
+ font-weight: 500;
+}
+
+.confirmation-message {
+ background-color: #e8f4fd;
+ border-left: 4px solid #0071e3;
+ padding: 1rem;
+ border-radius: 0 4px 4px 0;
+}
+
+.confirmation-actions {
+ display: flex;
+ gap: 1rem;
+ justify-content: center;
+ margin-top: 2rem;
+}
+
+.primary-button,
+.secondary-button {
+ padding: 0.75rem 1.5rem;
+ border-radius: 6px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.2s;
+}
+
+.primary-button {
+ background-color: #0071e3;
+ color: white;
+ border: none;
+}
+
+.primary-button:hover {
+ background-color: #005bbf;
+}
+
+.secondary-button {
+ background-color: transparent;
+ color: #0071e3;
+ border: 1px solid #0071e3;
+}
+
+.secondary-button:hover {
+ background-color: rgba(0, 113, 227, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ .checkout-content {
+   flex-direction: column;
+ }
+ 
+ .form-row {
+   flex-direction: column;
+   gap: 0;
+ }
+ 
+ .payment-options {
+   flex-direction: column;
+ }
+ 
+ .confirmation-actions {
+   flex-direction: column;
+ }
+}
+
+/* General checkout error */
+.checkout-error {
+ background-color: #fdeded;
+ border-left: 4px solid #e74c3c;
+ padding: 1rem;
+ border-radius: 0 4px 4px 0;
+ margin-bottom: 1rem;
+}
+
+.checkout-error p {
+ margin: 0;
+ color: #e74c3c;
+}

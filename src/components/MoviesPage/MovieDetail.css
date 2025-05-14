@@ -1,0 +1,334 @@
+.movie-detail {
+ width: 100%;
+ background-color: #141414;
+ color: #ffffff;
+ min-height: 100vh;
+}
+
+/* Loading and not found containers */
+.loading-container,
+.not-found-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 70vh;
+ text-align: center;
+ padding: 0 20px;
+}
+
+.not-found-container h2 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+}
+
+.not-found-container p {
+ font-size: 1.2rem;
+ margin-bottom: 2rem;
+ color: #aaaaaa;
+}
+
+/* Banner section */
+.movie-banner {
+ width: 100%;
+ min-height: 500px;
+ position: relative;
+ padding: 60px 0;
+}
+
+.movie-banner-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ padding: 0 20px;
+}
+
+.movie-poster {
+ flex: 0 0 300px;
+ margin-right: 40px;
+}
+
+.movie-poster img {
+ width: 100%;
+ height: auto;
+ border-radius: 8px;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info {
+ flex: 1;
+}
+
+.movie-info h1 {
+ font-size: 3rem;
+ margin-bottom: 1rem;
+ font-weight: 700;
+}
+
+.movie-meta {
+ display: flex;
+ flex-wrap: wrap;
+ margin-bottom: 1.5rem;
+}
+
+.movie-meta span {
+ margin-right: 1.5rem;
+ position: relative;
+ font-size: 1.1rem;
+}
+
+.movie-meta span:not(:last-child)::after {
+ content: "•";
+ position: absolute;
+ right: -1rem;
+ color: #888;
+}
+
+.movie-rating {
+ color: #f5c518;
+ font-weight: bold;
+}
+
+.movie-genres {
+ display: flex;
+ flex-wrap: wrap;
+ margin-bottom: 1.5rem;
+}
+
+.movie-genre {
+ background-color: rgba(255, 255, 255, 0.1);
+ padding: 6px 12px;
+ border-radius: 20px;
+ margin-right: 10px;
+ margin-bottom: 10px;
+ font-size: 0.9rem;
+}
+
+.movie-release-date,
+.movie-director,
+.movie-cast {
+ margin-bottom: 1rem;
+ font-size: 1.1rem;
+ line-height: 1.6;
+}
+
+/* Content container */
+.movie-content-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 40px 20px;
+}
+
+.movie-description {
+ margin-bottom: 40px;
+}
+
+.movie-description h2 {
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ color: #ffffff;
+}
+
+.movie-description p {
+ font-size: 1.1rem;
+ line-height: 1.8;
+ color: #dddddd;
+}
+
+/* Booking section */
+.booking-section {
+ background-color: #1a1a1a;
+ border-radius: 8px;
+ padding: 30px;
+ margin-bottom: 40px;
+}
+
+.booking-section h2 {
+ font-size: 1.8rem;
+ margin-bottom: 1.5rem;
+ color: #ffffff;
+}
+
+.booking-options {
+ margin-bottom: 30px;
+}
+
+.booking-dates,
+.booking-theaters,
+.booking-showtimes {
+ margin-bottom: 25px;
+}
+
+.booking-options h3 {
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+ color: #dddddd;
+}
+
+.date-selector,
+.theater-selector,
+.showtime-selector {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 12px;
+}
+
+.date-option,
+.theater-option,
+.showtime-option {
+ background-color: #2a2a2a;
+ border: 1px solid #3a3a3a;
+ color: #dddddd;
+ padding: 10px 16px;
+ border-radius: 6px;
+ cursor: pointer;
+ font-size: 1rem;
+ transition: all 0.2s ease;
+}
+
+.theater-option {
+ min-width: 200px;
+}
+
+.date-option:hover,
+.theater-option:hover,
+.showtime-option:hover {
+ background-color: #333;
+ border-color: #555;
+}
+
+.date-option.selected,
+.theater-option.selected,
+.showtime-option.selected {
+ background-color: #e50914;
+ color: #ffffff;
+ border-color: #e50914;
+}
+
+.book-tickets-button {
+ width: 100%;
+ background-color: #e50914;
+ color: white;
+ border: none;
+ border-radius: 6px;
+ padding: 12px 24px;
+ font-size: 1.2rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background-color 0.2s ease;
+}
+
+.book-tickets-button:hover {
+ background-color: #f40612;
+}
+
+.book-tickets-button:disabled {
+ background-color: #7a7a7a;
+ cursor: not-allowed;
+}
+
+/* Back button container */
+.back-to-movies {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px 40px;
+}
+
+.back-button {
+ background-color: transparent;
+ color: #dddddd;
+ border: 1px solid #444;
+ border-radius: 6px;
+ padding: 10px 20px;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: all 0.2s ease;
+}
+
+.back-button:hover {
+ background-color: rgba(255, 255, 255, 0.1);
+ color: #ffffff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 960px) {
+ .movie-banner-content {
+   flex-direction: column;
+ }
+ 
+ .movie-poster {
+   margin: 0 auto 30px;
+   max-width: 250px;
+ }
+ 
+ .movie-info h1 {
+   font-size: 2.5rem;
+   text-align: center;
+ }
+ 
+ .movie-meta,
+ .movie-genres {
+   justify-content: center;
+ }
+ 
+ .movie-release-date,
+ .movie-director,
+ .movie-cast {
+   text-align: center;
+ }
+}
+
+@media (max-width: 768px) {
+ .date-selector,
+ .theater-selector,
+ .showtime-selector {
+   justify-content: center;
+ }
+ 
+ .theater-option {
+   min-width: 80%;
+   text-align: center;
+ }
+ 
+ .movie-info h1 {
+   font-size: 2rem;
+ }
+ 
+ .back-to-movies {
+   text-align: center;
+ }
+}
+
+@media (max-width: 480px) {
+ .movie-banner {
+   min-height: auto;
+   padding: 30px 0;
+ }
+ 
+ .movie-poster {
+   max-width: 200px;
+ }
+ 
+ .movie-info h1 {
+   font-size: 1.8rem;
+ }
+ 
+ .movie-meta span {
+   margin-right: 1rem;
+   font-size: 0.9rem;
+ }
+ 
+ .movie-meta span:not(:last-child)::after {
+   right: -0.7rem;
+ }
+ 
+ .booking-section {
+   padding: 20px;
+ }
+ 
+ .date-option,
+ .showtime-option {
+   font-size: 0.9rem;
+   padding: 8px 12px;
+ }
+}
